@@ -16,7 +16,7 @@ class App extends Component{
     const fetchOffers = bindActionCreators(
       actionCreators.fetchOffers, this.props.dispatch
     );
-    fetch('http://localhost:3001/' + offer)
+    fetch('https://react-tilbod-web.herokuapp.com/' + offer)
       .then((response)=>response.json())
       .then((response)=>{
         fetchOffers(response);
