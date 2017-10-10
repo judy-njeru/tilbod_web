@@ -1,0 +1,20 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.app_wrapper{
+  margin: 0 auto;
+  .thumbnail img {
+    width: 100%;
+  }
+  .price_card {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .caption {
+    background-color: #f2f2f2;
+  }
+}
