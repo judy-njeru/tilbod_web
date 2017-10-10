@@ -4,3 +4,7 @@
   align-items: center;
   background: $main-color;
 }
+
+.menu_item {
+    @include resetBtnFocus;
+}
