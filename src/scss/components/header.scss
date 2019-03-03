@@ -8,3 +8,56 @@
 .menu_item {
     @include resetBtnFocus;
 }
+
+.navbar {
+  margin-bottom: 70px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
+
+  .navbar-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+
+      a {
+        position: relative;
+        color: #777;
+        transition: all .5s;
+
+        &:before {
+          transition: all .5s;
+        }
+
+        &:after {
+          position: absolute;
+          bottom: -16%;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          content: '.';
+          color: transparent;
+          background: #aaa;
+          height: 3px;
+          transition: all .5s;
+        }
+
+        &:hover {
+          color: #555;
+          text-decoration: none;
+          font-size:inherit;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

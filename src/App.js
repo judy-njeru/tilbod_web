@@ -9,9 +9,11 @@ import * as actionCreators from './actions/offers';
 
 
 class App extends Component{
+
   componentDidMount(){
     this.displayOffers("aha");
   }
+
   displayOffers = (offer) =>{
     const fetchOffers = bindActionCreators(
       actionCreators.fetchOffers, this.props.dispatch
@@ -48,14 +50,6 @@ class App extends Component{
         )
       })
     }
-
-
-
-    // else if(this.props.search){
-    //   this.props.offers.filter((offer)=>{
-    //     return b nameToLower().indexOf(b.toLowerCase())
-    //   })
-    // }
 
     let offers = this.props.offers.filter(offer=>{
       return offer.price != undefined;
@@ -113,10 +107,3 @@ const mapStateToProps = (state)=>{
   }
 }
 export default connect (mapStateToProps)(App);
-
-//
-// {this.props.displayOffers ? offer === "aha" ?
-//   this.props.offers.map(offer=>{
-//     return <Offer offer = {offer} />
-//   })
-// }

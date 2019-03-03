@@ -1,9 +1,53 @@
+.container{
+  text-decoration: none;
+  a{
+    color: #333333;
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 .container_filters{
-  display:flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  float:right;
+  width: 36%;
   margin:10px;
 }
 .btn_filter_price{
   @include resetBtnFocus;
   @include priceFilter;
+}
+
+.show-grid {
+  clear: both;
+}
+
+.form-control {
+  &:focus {
+    outline:none !important;
+    border-color: #ced4da;
+    box-shadow: none;
+  }
+}
+
+/*
+.product_card_link {
+
+  &:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
+  }
+}
+*/
+
+.product-card {
+  background-color: #f1f1f1;
+  padding: 8px;
+
 }
