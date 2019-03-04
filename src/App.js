@@ -14,7 +14,7 @@ class App extends Component{
     this.displayOffers("aha");
   }
 
-  displayOffers = (offer) =>{
+  displayOffers = (offer) => {
     const fetchOffers = bindActionCreators(
       actionCreators.fetchOffers, this.props.dispatch
     );
@@ -29,13 +29,12 @@ class App extends Component{
       displayOffers();
   }
 
-  priceToInt(price){
+  priceToInt(price) {
     return price ? parseInt(price.split('.').join("")) : null;
   };
 
 
   render(){
-
     if(this.props.filter === 'lowest'){
       this.props.offers.sort((a, b)=>{
         return(
